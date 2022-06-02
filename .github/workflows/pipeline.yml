@@ -17,7 +17,7 @@ jobs:
          node-version: 14
          cache: 'npm'
      - name: Install dependencies
-       run: npm install --no-audit --no-fund --no-optional
+       run: npm ci
      - name: Lint
        run: npm run eslint
      - name: Build
@@ -29,5 +29,5 @@ jobs:
        with:
           command: npm run test:e2e
           start: npm run start-test
-          wait-on: http://localhost:5000; 
+          wait-on: http://localhost:5000
  
